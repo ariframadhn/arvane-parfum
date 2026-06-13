@@ -1,0 +1,202 @@
+.page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: var(--primary-bg);
+}
+
+.header {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(13, 71, 161, 0.1) 0%, rgba(5, 5, 5, 1) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 12px 24px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+.searchBox:focus-within {
+  border-color: var(--accent-ocean);
+}
+
+.searchBox .icon {
+  color: var(--text-secondary);
+  margin-right: 12px;
+}
+
+.searchBox input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 0 20px;
+  height: 48px;
+  color: var(--text-secondary);
+}
+
+.filterGroup select {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  margin-left: 8px;
+  padding-right: 8px;
+}
+
+.filterGroup select option {
+  background: var(--secondary-bg);
+  color: var(--text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.imageWrapper {
+  height: 250px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.volume {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--accent-cyan);
+}
+
+.addBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addBtn:hover {
+  background: var(--text-primary);
+  color: var(--primary-bg);
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--text-secondary);
+}
+
+.empty button {
+  margin-top: 16px;
+  background: transparent;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filters {
+    flex-direction: column;
+  }
+}
