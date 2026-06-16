@@ -14,35 +14,35 @@ const products = [
     price: "IDR 499.000",
     image: "/asset/blue large.png",
     colSpan: 2,
-    rowSpan: 2
+    rowSpan: 2,
   },
   {
     id: 2,
     name: "ARVANE SIGNATURE",
     volume: "50ml",
-    price: "IDR 399.000",
-    image: "/asset/1 large.png",
+    price: "IDR 299.000",
+    image: "/asset/parfum1.png",
     colSpan: 1,
-    rowSpan: 1
+    rowSpan: 1,
   },
   {
     id: 3,
-    name: "SORRENTO",
+    name: "ARVANE FOREST",
     volume: "50ml",
-    price: "IDR 349.000",
+    price: "IDR 299.000",
     image: "/asset/sorrento.png",
     colSpan: 1,
-    rowSpan: 1
+    rowSpan: 1,
   },
   {
     id: 4,
-    name: "PINK BLOOM",
+    name: "ARVANE BLOOM",
     volume: "50ml",
-    price: "IDR 349.000",
+    price: "IDR 499.000",
     image: "/asset/pink large.png",
     colSpan: 2,
-    rowSpan: 1
-  }
+    rowSpan: 1,
+  },
 ];
 
 export default function FeaturedProducts() {
@@ -63,7 +63,7 @@ export default function FeaturedProducts() {
               className={styles.cardWrapper}
               style={{
                 gridColumn: `span ${product.colSpan}`,
-                gridRow: `span ${product.rowSpan}`
+                gridRow: `span ${product.rowSpan}`,
               }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,10 +72,10 @@ export default function FeaturedProducts() {
             >
               <div className={`${styles.card} glass-card`}>
                 <div className={styles.imageContainer}>
-                  <Image 
-                    src={product.image} 
-                    alt={product.name} 
-                    fill 
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
                     style={{ objectFit: "contain", padding: "20px" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
@@ -83,7 +83,9 @@ export default function FeaturedProducts() {
                 <div className={styles.productInfo}>
                   <div>
                     <h3 className={styles.productName}>{product.name}</h3>
-                    <p className={styles.productDetails}>{product.volume} • {product.price}</p>
+                    <p className={styles.productDetails}>
+                      {product.volume} • {product.price}
+                    </p>
                   </div>
                   <button className={styles.addBtn} aria-label="Add to Cart">
                     <Plus size={20} />
