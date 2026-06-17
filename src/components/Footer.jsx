@@ -32,7 +32,7 @@ export default function Footer() {
             
             <div className={styles.linkGroup}>
               <h3>About</h3>
-              <Link href="/brand-story">Our Story</Link>
+              <Link href="/about">Our Story</Link>
               <Link href="/ingredients">Ingredients</Link>
               <Link href="/sustainability">Sustainability</Link>
             </div>
